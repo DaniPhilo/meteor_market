@@ -19,13 +19,12 @@ function SignIn({ setShowSignUp }) {
             password: event.target.password.value
         }
 
-        const request = await fetch('https://vast-castle-72865.herokuapp.com/api/auth/signIn', {
+        const request = await fetch('http://localhost:3001/api/auth/signIn', {
             method: 'POST',
             headers: {
                 Accept: 'application/json',
                 'Content-Type': 'application/json'
             },
-            credentials: 'include',
             body: JSON.stringify(data)
         });
 
