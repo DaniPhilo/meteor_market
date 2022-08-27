@@ -36,7 +36,7 @@ function NeasList() {
 
   useEffect(() => {
     const init = async () => {
-      const data = await fetchNeas(`https://vast-castle-72865.herokuapp.com/api/astronomy/neas/${currentPage}?field=designation&order=1`);
+      const data = await fetchNeas(`${process.env.REACT_APP_SITE_URL}/api/astronomy/neas/${currentPage}?field=designation&order=1`);
       if (data.response) {
         setNumberOfPages(Math.floor(data.count / 10));
         setNumberOfDocs(data.count);
