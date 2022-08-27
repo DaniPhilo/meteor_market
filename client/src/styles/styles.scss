@@ -159,7 +159,15 @@ nav>ul>li>a {
   margin: 1rem auto;
 }
 
-.signing-container > h3 {
+.guest-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.signing-container > h3,
+.guest-container > h3 {
   margin: 1rem 0;
   color: $text-color;
   text-align: center;
@@ -190,7 +198,8 @@ nav>ul>li>a {
   border-radius: 20px;
 }
 
-.signing-container > form > button {
+.signing-container > form > button,
+.guest-container > button {
   padding: 0.5rem 1rem;
   background-color: $card-color;
   color: $text-color;
@@ -199,7 +208,8 @@ nav>ul>li>a {
   cursor: pointer;
 } 
 
-.signing-container > form > button:hover {
+.signing-container > form > button:hover,
+.guest-container > button:hover {
   background-color: $accent-color;
 }
 

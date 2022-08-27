@@ -8,7 +8,7 @@ function AuthenticationForms() {
     const [showSignUp, setShowSignUp] = useState(true);
 
     return (
-        <section>
+        <section className='signing-section'>
             {showSignUp ?
                 <SignUp showSignUp={showSignUp} setShowSignUp={setShowSignUp} />
                 :

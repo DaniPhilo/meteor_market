@@ -3,6 +3,8 @@ import { useNavigate } from 'react-router-dom'
 
 import { UserContext } from '../../context/user_context'
 
+import GuestLogin from './GuestLogin';
+
 function SignUp({ setShowSignUp }) {
 
     const { setIsAuthenticated } = useContext(UserContext);
@@ -80,11 +82,13 @@ function SignUp({ setShowSignUp }) {
                     <label htmlFor="password2">Repeat password: </label>
                     <input type="password" name='password2' />
                 </div>
-                
+
                 <button type='submit'>Sign Up</button>
 
             </form>
             <p className='show-signIn' onClick={showSignIn}>I already have an account.</p>
+
+            <GuestLogin />
         </div>
     )
 }
