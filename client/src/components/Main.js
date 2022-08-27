@@ -17,11 +17,11 @@ function Main() {
     const navigate = useNavigate();
 
     const checkSession = async () => {
-        const request = await fetch('https://vast-castle-72865.herokuapp.com/api/auth/session', {
+        const request = await fetch(`${process.env.REACT_APP_SITE_URL}/api/auth/session`, {
             headers: {
                 'Content-Type': 'application/x-www-form-urlencoded'
             },
-            credentials: 'include'
+            credentials: 'include',
         });
         const response = await request.json();
         if (!response.authenticated) {

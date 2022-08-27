@@ -17,7 +17,7 @@ function Map() {
     useEffect(() => {
         const fetchLandings = async () => {
             try {
-                const response = await fetch('https://vast-castle-72865.herokuapp.com/api/astronomy/landings/minMass/0', {
+                const response = await fetch(`${process.env.REACT_APP_SITE_URL}/api/astronomy/landings/minMass/0`, {
                     headers: {
                         'Content-Type': 'application/x-www-form-urlencoded'
                     },

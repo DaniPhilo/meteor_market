@@ -19,12 +19,13 @@ function SignIn({ setShowSignUp }) {
             password: event.target.password.value
         }
 
-        const request = await fetch('http://localhost:3001/api/auth/signIn', {
+        const request = await fetch(`${process.env.REACT_APP_SITE_URL}/api/auth/signIn`, {
             method: 'POST',
             headers: {
                 Accept: 'application/json',
                 'Content-Type': 'application/json'
             },
+            credentials: 'include',
             body: JSON.stringify(data)
         });
 

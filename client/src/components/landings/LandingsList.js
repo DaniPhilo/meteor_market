@@ -35,7 +35,7 @@ function LandingsList() {
 
   useEffect(() => {
     const init = async () => {
-      const data = await fetchLandings(`https://vast-castle-72865.herokuapp.com/api/astronomy/landings/${currentPage}?field=name&order=1`);
+      const data = await fetchLandings(`${process.env.REACT_APP_SITE_URL}/api/astronomy/landings/${currentPage}?field=name&order=1`);
       if (data.response) {
         setNumberOfPages(Math.floor(data.count / 10));
         setNumberOfDocs(data.count);

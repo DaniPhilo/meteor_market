@@ -10,7 +10,7 @@ function LogOut() {
     const navigate = useNavigate();
 
     const handleLogOut = async () => {
-        const response = await fetch('https://vast-castle-72865.herokuapp.com/api/auth/logOut', {
+        const response = await fetch(`${process.env.REACT_APP_SITE_URL}/api/auth/logOut`, {
             headers: {
                 'Content-Type': 'application/x-www-form-urlencoded'
             },

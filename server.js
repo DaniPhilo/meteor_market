@@ -17,7 +17,10 @@ const PORT = process.env.PORT || 3001;
 //     origin: 'https://chimerical-concha-25ad5f.netlify.app',
 //     credentials: true
 // }));
-app.use(cors());
+app.use(cors({
+    origin: 'http://localhost:3000',
+    credentials: true
+}));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
@@ -77,6 +80,8 @@ app.use((error, req, res, next) => {
 app.use((req, res) => {
     res.status(404).json({ response: false, message: 'Route not found' })
 })
+
+
 
 
 app.listen(PORT, async () => {
