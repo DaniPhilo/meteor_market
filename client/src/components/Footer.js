@@ -7,9 +7,9 @@ function Footer() {
   const { isAuthenticated } = useContext(UserContext);
 
   return (
-    <footer>
+    <>
       {isAuthenticated &&
-        <>
+        <footer>
           <div className="footer-div">
             <h4>Contact</h4>
             <p>nasa.api@nasa-api.com</p>
@@ -31,8 +31,8 @@ function Footer() {
             <h4>Documentation</h4>
             <a href={`${process.env.REACT_APP_SITE_URL}/api/docs`} target="_blank">API documentation.</a>
           </div>
-        </>}
-    </footer>
+        </footer>}
+    </>
   )
 }
 
