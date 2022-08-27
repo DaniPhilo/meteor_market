@@ -18,7 +18,7 @@ function Nav({ currentPage, setCurrentPage, isVisible, setIsVisible }) {
                 <li className={currentPage === 'Home' ? 'current-page' : 'nav-item'} onClick={handleClick}><Link to="/home">Home</Link></li>
                 <li className={currentPage === 'Landings Map' ? 'current-page' : 'nav-item'} onClick={handleClick}><Link to="/landings">Landings Map</Link></li>
                 <li className={currentPage === 'Landings List' ? 'current-page' : 'nav-item'} onClick={handleClick}><Link to="/landings/list">Landings List</Link></li>
-                <li className={currentPage === 'Neas List' ? 'current-page' : 'nav-item'} onClick={handleClick}><Link to='/neas'>Neas List</Link></li>
+                <li className={currentPage === 'Neas List' ? 'current-page' : 'nav-item'} onClick={handleClick}><Link to='/neas'>NEAs List</Link></li>
                 <li className={currentPage === 'Cart' ? 'current-page' : 'nav-item'} onClick={handleClick}><Link to='/cart'>Cart</Link></li>
                 <li><LogOut /></li>
             </ul>
