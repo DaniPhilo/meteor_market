@@ -1,0 +1,29 @@
+header>h1 {
+    width: fit-content;
+    height: $header-height;
+    margin: 0 auto;
+
+    font-family: 'Monoton', cursive;
+    font-weight: 100;
+    font-size: 2.5rem;
+    line-height: $header-height;
+    color: $accent-color;
+}
+
+header>h1>span {
+    width: fit-content;
+    height: $header-height;
+    margin: 0 auto;
+
+    font-family: 'Dancing Script', cursive;
+    font-weight: 2rem;
+    font-size: rem;
+    color: $alt-accent-color;
+}
+
+header {
+    height: 15vh;
+
+    background-color: $secondary-color;
+    color: $text-color;
+}

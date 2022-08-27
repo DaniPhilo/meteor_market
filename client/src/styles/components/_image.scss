@@ -1,0 +1,64 @@
+.image-section {
+  padding: 1rem;
+  width: 100vw;
+}
+
+.image-container {
+  width: 100%;
+}
+
+.image-container>h4 {
+  text-align: center;
+  margin: 1rem auto;
+
+  color: $text-color;
+}
+
+.image-container>img {
+  width: 100%;
+}
+
+.explanation {
+  margin-top: 1rem;
+}
+
+.explanation>p {
+  color: $text-color;
+}
+
+@media (min-width: 750px) {
+  .image-section {
+    padding: 1rem;
+    width: calc(100vw - $desktop-icon-nav-width - 1.1rem);
+  }
+  
+  .image-container {
+    width: 100%;
+  }
+  
+  .image-container > h4 {
+    text-align: center;
+    margin: 1rem auto;
+  
+    color: $text-color;
+  }
+  
+  .image-container > img {
+    display: block;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .explanation {
+    width: 100%;
+    margin-top: 1rem;
+  }
+  .explanation > p {
+    display: block;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    color: $text-color;
+  }
+}

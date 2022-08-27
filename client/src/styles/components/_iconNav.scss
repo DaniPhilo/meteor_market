@@ -1,0 +1,81 @@
+@media (min-width: 750px) {
+
+.icons-navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+
+    width: $desktop-icon-nav-width;
+    height: 100vh;
+    padding-top: $header-height;
+
+    background-color: $secondary-color;
+  }
+
+  .icons-navbar:hover + nav {
+    left: $desktop-icon-nav-width;
+  }
+  .icons-navbar:hover ~ h1 {
+    transform: translateX($desktop-nav-width);
+  }
+
+  .icons-navbar>ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: $list-gap;
+
+    width: 100%;
+
+    margin-top: $list-margin-top;
+  }
+
+  .icons-navbar>ul>li {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 4rem;
+
+    list-style-type: none;
+  }
+
+  .icons-navbar > ul > li:nth-of-type(1).current-page ~ div {
+    transform: translateY(calc((64px + $list-gap) * 0));
+  }
+  .icons-navbar > ul > li:nth-of-type(2).current-page ~ div {
+    transform: translateY(calc((64px + $list-gap) * 1));
+  }
+  .icons-navbar > ul > li:nth-of-type(3).current-page ~ div {
+    transform: translateY(calc((64px + $list-gap) * 2));
+  }
+  .icons-navbar > ul > li:nth-of-type(4).current-page ~ div {
+    transform: translateY(calc((64px + $list-gap) * 3));
+  }
+  .icons-navbar > ul > li:nth-of-type(5).current-page ~ div {
+    transform: translateY(calc((64px + $list-gap) * 4));
+  }
+
+  .icons-navbar>ul>li>i {
+    font-size: 1.5rem;
+    z-index: 10;
+  }
+
+  .icon-marker {
+    position: fixed;
+    top: calc($header-height + 1.55rem);
+
+    width: 3rem;
+    height: 3rem;
+
+    background-color: $accent-color;
+    border-radius: 50%;
+
+    z-index: 9;
+
+    transition: transform 0.25s ease-in-out;
+  }
+}

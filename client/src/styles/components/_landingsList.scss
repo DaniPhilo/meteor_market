@@ -1,0 +1,424 @@
+.launch-create-form {
+    display: block;
+    margin: 1rem auto;
+    padding: 0.5rem 1rem;
+    background-color: $alt-color;
+    color: $text-color;
+    border: 1px solid $accent-color;
+    border-radius: 20px;
+    cursor: pointer;
+  }
+  
+  .launch-create-form:hover {
+    background-color: $accent-color;
+  }
+  
+  .create-aside {
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    z-index: 11;
+  
+    width: 100vw;
+    max-height: 100vh;
+  
+    background-color: $modal-color;
+  
+    transition: transform 0.25s ease-in-out;
+  }
+  
+  
+  
+  .create-form {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+  
+    padding: 1.5rem;
+  
+    color: white;
+  }
+  
+  .create-form > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .create-form > div > input {
+    height: 1.75rem;
+    padding: 0.25rem;
+    color: $text-color;
+    background-color: $modal-color;
+    border: 1px solid $accent-color;
+    border-radius: 20px;
+  }
+  
+  .create-form > .create-button {
+    padding: 0.5rem 1rem;
+    background-color: $alt-color;
+    color: $text-color;
+    border: 1px solid $accent-color;
+    border-radius: 20px;
+    cursor: pointer;
+  }
+  
+  .create-form > .create-button:hover {
+    background-color: $accent-color;
+  }
+  
+  .create-form > .close-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0.25rem;
+  
+    background-color: $modal-color;
+    border: none;
+  }
+  .create-form > button > .fa-xmark {
+    font-size: 1.5rem;
+    color: $delete-btn-color; 
+    cursor: pointer;
+  }
+  
+  .create-nea-form > div > label {
+    font-size: small;
+  }
+  .create-nea-form > div > input {
+    height: 1rem;
+  }
+  
+  .search-by-name {
+    margin: 0.5rem auto;
+  }
+  
+  .search-by-name > form {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .search-by-name > form > input {
+    height: 1.75rem;
+    padding: 0.25rem;
+    color: $text-color;
+    background-color: $alt-color;
+    border: 1px solid $accent-color;
+    border-radius: 20px;
+  }
+  
+  .search-by-name > form > button {
+    padding: 0.25rem;
+    background-color: $alt-color;
+    border: none;
+    cursor: pointer;
+  }
+  .search-by-name > form > button > .fa-magnifying-glass {
+    font-size: 1.25rem;
+    color: $accent-color;
+  }
+  
+  .order-buttons {
+    width: fit-content;
+    height: fit-content;
+    margin: 1rem auto;
+  }
+  .order-buttons > button {
+    padding: 0.25rem 0.75rem;
+    background-color: $alt-color;
+    color: $text-color;
+    cursor: pointer;
+  }
+  .order-buttons > button:hover {
+    background-color: $accent-color;
+  }
+  .order-buttons > button:nth-of-type(1) {
+    border-top: 1px solid $accent-color;
+    border-bottom: 1px solid $accent-color;
+    border-left: 1px solid $accent-color;
+    border-right: 1px solid $accent-color;
+    border-radius: 5px 0 0 5px;
+  }
+  .order-buttons > button:nth-of-type(2) {
+    border-top: 1px solid $accent-color;
+    border-bottom: 1px solid $accent-color;
+    border-left: 1px solid $accent-color;
+    border-right: 1px solid $accent-color;
+  }
+  .order-buttons > button:nth-of-type(3) {
+    border-top: 1px solid $accent-color;
+    border-bottom: 1px solid $accent-color;
+    border-left: 1px solid $accent-color;
+    border-right: 1px solid $accent-color;
+    border-radius: 0 5px 5px 0;
+  }
+  .order-buttons > .fa-arrow-down-long,
+  .order-buttons > .fa-arrow-up-long {
+    margin-right: 0.75rem;
+    font-size: 1.25rem;
+    color: $accent-color;
+  }
+  
+  .cards-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  
+    width: 90vw;
+    margin: 0 auto;
+  }
+  
+  
+  
+  .card {
+    position: relative;
+  
+    width: 250px;
+    height: 250px;
+    padding: 1rem;
+  
+    background-color: $card-color;
+    background-size: cover;
+    border-radius: 5px;
+  
+    overflow: hidden;
+  
+    cursor: pointer;
+  }
+  
+  .card:hover .card-title {
+    transform: translateY(-6rem);
+  }
+  .card:hover .card-title > h4 {
+    font-size: 1.5rem;
+  }
+  .card:hover .card-title > h4::after {
+    transform: scale(1);
+  }
+  .card:hover .card-content {
+    transform: translateY(20%);
+  }
+  .card:hover .card-content > * {
+    opacity: 1
+  }
+  
+  .card-title {
+    position: absolute;
+  
+    width: 100%;
+    left: 0;
+    bottom: 35%;
+  
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .card-title > h4 {
+    position: relative;
+  
+    width: 90%;
+    margin: 0 auto;
+    padding-bottom: 0.25rem;
+  
+    color: $text-color;
+    text-align: center;
+    font-size: 2rem;
+  
+    transition-property: font-size, width;
+    transition: 0.5s ease-in-out;
+  }
+  
+  .card-title > h4::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  
+    width: 100%;
+    height: 2px;
+  
+    content: '';
+    background-color: $accent-color;
+  
+    transform: scale(0);
+    transition: transform 0.25s ease-in-out;
+  }
+  
+  .card-content {
+    display: flex;
+    flex-direction: column;
+  
+    height: 100%;
+  
+    transform: translateY(110%);
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .card-content > * {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+  }
+  
+  .card-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  
+    margin-bottom: 1rem;
+  }
+  
+  .nea-card > .card-content > .card-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.25rem;
+  }
+  
+  .card-info > p {
+    color: $text-color;
+    font-size: 1rem;
+  }
+  
+  .card-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 2rem;
+  }
+  
+  .card-buttons > button {
+    background-color: $card-color;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+  }
+  .fa-pen-to-square {
+    color: $edit-btn-color;
+  }
+  .fa-trash-can {
+    color: $delete-btn-color;
+  }
+  .fa-cart-shopping {
+    color: $buy-btn-color;
+  }
+  
+  .edit-form {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    
+    width: 250px;
+    height: 250px;
+    padding: 1rem;
+    background-color: $card-color;
+    background-size: cover;
+    border-radius: 5px;
+  }
+  
+  .edit-form > input {
+    height: 1.75rem;
+    padding: 0.25rem;
+    color: $text-color;
+    background-color: $modal-color;
+    border: 1px solid $accent-color;
+    border-radius: 20px;
+  }
+  
+  .edit-form > button:nth-of-type(1){
+    padding: 0.5rem 1rem;
+    background-color: $card-color;
+    color: $text-color;
+    border: 1px solid $accent-color;
+    border-radius: 20px;
+    cursor: pointer;
+  }
+  
+  .edit-form > button:nth-of-type(1):hover {
+    background-color: $accent-color;
+  }
+  
+  .edit-form > button:nth-of-type(2) {
+    position: absolute;
+    top: 1%;
+    right: 5%;
+    padding: 0.25rem;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .edit-nea-form > button:nth-of-type(2) {
+    top: 0;
+    right: 1%;
+  }
+  
+  .edit-form > button:nth-of-type(2) > .fa-xmark {
+    font-size: 1.25rem;
+    color: $delete-btn-color;
+  }
+  
+  .edit-nea-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    gap: 0.25rem;
+    
+    width: 250px;
+    height: 250px;
+    padding: 1rem;
+    
+    background-color: $card-color;
+    background-size: cover;
+    border-radius: 5px;
+  }
+  
+  .edit-nea-form > input {
+    width: 100%;
+  }
+  
+  .pagination-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+  
+    width: 90vw;
+    margin: 1rem auto;
+  }
+  
+  .pagination-container > span {
+    color: $text-color;
+  }
+  
+  .pagination-container > button {
+    padding: 0.25rem;
+  
+    background-color: $alt-color;
+    border: none;
+  }
+  
+  .pagination-container > button > .fa-chevron-right,
+  .pagination-container > button > .fa-chevron-left {
+    color: $accent-color;
+    font-size: 1.25rem;
+    cursor: pointer;
+  }

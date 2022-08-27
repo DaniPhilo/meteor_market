@@ -1,0 +1,37 @@
+.burger-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+
+    position: fixed;
+    right: 5%;
+    top: 5%;
+    z-index: 10;
+
+    width: fit-content;
+    height: fit-content;
+
+    cursor: pointer;
+}
+
+.burger-top {
+    width: 25px;
+    height: 3px;
+
+    background-color: white;
+}
+
+.burger-mid {
+    width: 25px;
+    height: 3px;
+
+    background-color: white;
+}
+
+.burger-bot {
+    width: 25px;
+    height: 3px;
+
+    background-color: white;
+}
