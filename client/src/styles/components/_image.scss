@@ -9,13 +9,13 @@
   color: $text-color;
 }
 
-.welcome > h2 {
+.welcome>h2 {
   text-align: center;
   font-size: 2.5rem;
   letter-spacing: 3px;
 }
 
-.welcome > h3 {
+.welcome>h3 {
   text-align: center;
   font-size: 1.5rem;
   letter-spacing: 2px;
@@ -29,18 +29,19 @@
   gap: 1rem;
 }
 
-.welcome-info > p {
+.welcome-info>p {
   width: 50%;
   margin: 0 auto;
   font-size: 1.25rem;
   text-align: start;
 }
 
-.welcome-info > ul {
+.welcome-info>ul {
   width: 50%;
   margin: 0 auto;
   list-style-type: none;
 }
+
 .welcome-info>ul>li {
   padding-top: 0.5rem;
   letter-spacing: 0.75px;
@@ -51,38 +52,58 @@
   font-size: 1.25rem;
   font-weight: bold;
 }
+
 .intro-links {
   color: $text-color;
   font-weight: bold;
 }
-
-
 
 .image-section {
   padding: 1rem;
   width: 100vw;
 }
 
-.image-container {
-  width: 100%;
+.apod {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 3rem;
 }
 
-.image-container>h4 {
+.apod-title>h3 {
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+  text-align: center;
+  color: $text-color;
+}
+
+.apod-title>h4 {
   text-align: center;
   margin: 1rem auto;
 
   color: $text-color;
+  font-size: 1.25rem;
+  letter-spacing: 1.25px;
+}
+
+.image-container {
+  display: grid;
+  grid-template-columns: 3fr;
+  gap: 1rem;
 }
 
 .image-container>img {
-  width: 100%;
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  width: 275px;
+  height: 275px;
+  margin: 0 auto;
+  background-size: contain;
 }
 
-.explanation {
-  margin-top: 1rem;
-}
-
-.explanation>p {
+.image-container>p {
+  grid-column: 2 / 4;
+  grid-row: 1 / 2;
   color: $text-color;
 }
 
@@ -91,34 +112,19 @@
     padding: 1rem;
     width: calc(100vw - $desktop-icon-nav-width - 1.1rem);
   }
-  
+}
+
+@media (max-width: 550px) {
   .image-container {
-    width: 100%;
+    justify-content: center;
   }
-  
-  .image-container > h4 {
-    text-align: center;
-    margin: 1rem auto;
-  
-    color: $text-color;
+
+  .image-container>img {
+    grid-column: 1 / 4;
   }
-  
-  .image-container > img {
-    display: block;
-    width: 100%;
-    max-width: 800px;
-    margin: 0 auto;
-  }
-  
-  .explanation {
-    width: 100%;
-    margin-top: 1rem;
-  }
-  .explanation > p {
-    display: block;
-    width: 100%;
-    max-width: 800px;
-    margin: 0 auto;
-    color: $text-color;
+
+  .image-container>p {
+    grid-column: 1 / 4;
+    grid-row: 2 / 3;
   }
 }

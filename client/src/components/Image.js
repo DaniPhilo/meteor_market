@@ -37,14 +37,18 @@ function Image() {
                             </ul>
                         </div>
                     </div>
+                    <div className="apod">
+                        <div className="apod-title">
+                            <h3>Astronomic Picture of the Day</h3>
+                            <h4>{apod.title} ({apod.date})</h4>
+                        </div>
 
-                    <div className="image-container">
-                        <h4>{apod.title} ({apod.date})</h4>
-                        <img src={apod.url} alt="" />
+                        <div className="image-container">
+                            <img src={apod.url} alt="" />
+                            <p>{apod.explanation}</p>
+                        </div>
                     </div>
-                    <div className="explanation">
-                        <p>{apod.explanation}</p>
-                    </div>
+
                 </>
             }
         </section>
