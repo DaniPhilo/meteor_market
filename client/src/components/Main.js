@@ -29,6 +29,7 @@ function Main() {
             return navigate('/')
         }
         setIsAuthenticated(true);
+        navigate('/home');
     }
 
     useEffect(() => {
