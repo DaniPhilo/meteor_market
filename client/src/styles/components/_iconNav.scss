@@ -1,6 +1,6 @@
 @media (min-width: 750px) {
 
-.icons-navbar {
+  .icons-navbar {
     position: fixed;
     top: 0;
     left: 0;
@@ -13,10 +13,11 @@
     background-color: $secondary-color;
   }
 
-  .icons-navbar:hover + nav {
+  .icons-navbar:hover+nav {
     left: $desktop-icon-nav-width;
   }
-  .icons-navbar:hover ~ h1 {
+
+  .icons-navbar:hover~h1 {
     transform: translateX($desktop-nav-width);
   }
 
@@ -28,7 +29,7 @@
 
     width: 100%;
 
-    margin-top: $list-margin-top;
+    // margin-top: $list-margin-top;
   }
 
   .icons-navbar>ul>li {
@@ -43,19 +44,23 @@
     list-style-type: none;
   }
 
-  .icons-navbar > ul > li:nth-of-type(1).current-page ~ div {
+  .icons-navbar>ul>li:nth-of-type(1).current-page~div {
     transform: translateY(calc((64px + $list-gap) * 0));
   }
-  .icons-navbar > ul > li:nth-of-type(2).current-page ~ div {
+
+  .icons-navbar>ul>li:nth-of-type(2).current-page~div {
     transform: translateY(calc((64px + $list-gap) * 1));
   }
-  .icons-navbar > ul > li:nth-of-type(3).current-page ~ div {
+
+  .icons-navbar>ul>li:nth-of-type(3).current-page~div {
     transform: translateY(calc((64px + $list-gap) * 2));
   }
-  .icons-navbar > ul > li:nth-of-type(4).current-page ~ div {
+
+  .icons-navbar>ul>li:nth-of-type(4).current-page~div {
     transform: translateY(calc((64px + $list-gap) * 3));
   }
-  .icons-navbar > ul > li:nth-of-type(5).current-page ~ div {
+
+  .icons-navbar>ul>li:nth-of-type(5).current-page~div {
     transform: translateY(calc((64px + $list-gap) * 4));
   }
 
@@ -66,7 +71,7 @@
 
   .icon-marker {
     position: fixed;
-    top: calc($header-height + 1.55rem);
+    top: calc($header-height + 0.55rem);
 
     width: 3rem;
     height: 3rem;
