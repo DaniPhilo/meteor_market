@@ -292,6 +292,9 @@
     color: $text-color;
     font-size: 1rem;
   }
+  .nea-card > .card-content > .card-info > p {
+    font-size: 0.9rem;
+  }
   
   .card-buttons {
     display: flex;

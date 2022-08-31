@@ -49,7 +49,7 @@ function NeaFront({ nea, setNeas, setIsEdit, setIsAuthenticated}) {
                 <div className="card-info">
                     <p><b>Date</b>: {discovery_date.slice(0, 10)}</p>
                     <p><b>Magnitude</b>: {h_mag}</p>
-                    <p><b>Perih / Aph.</b>.: {q_au_1} / {q_au_2}</p>
+                    <p><b>Perih. / Aph.</b>: {q_au_1} / {q_au_2}</p>
                     <p><b>Orbit (years)</b>: {period_yr}</p>
                     <p><b>Potentially Hazardous (Y/N)</b>: {pha}</p>
                     <p><b>Class</b>: {orbit_class}</p>
