@@ -44,7 +44,7 @@ const getPaginatedLandings = async (field, order, page) => {
 const getByMinMass = async (minMass) => {
     try {
         if (!validateNumber(minMass)) { throw new CustomError('Invalid parameter(mass): please, provide a whole number') }
-
+        
         const landings = await Landing.find({
             $expr: {
                 $gte: [
@@ -53,6 +53,7 @@ const getByMinMass = async (minMass) => {
                 ]
             }
         }).sort({ mass: 1 });
+        
         return landings
     }
     catch (error) {

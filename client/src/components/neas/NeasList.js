@@ -51,7 +51,7 @@ function NeasList() {
     event.preventDefault();
 
     setLoading(true);
-    const data = await fetchNeas(`https://vast-castle-72865.herokuapp.com/api/astronomy/neas/designation/${event.target.designation.value}`);
+    const data = await fetchNeas(`${process.env.REACT_APP_SITE_URL}/api/astronomy/neas/designation/${event.target.designation.value}`);
     if (data.response) {
       setNumberOfDocs(data.count);
       setNeas(data.neas);
@@ -63,7 +63,7 @@ function NeasList() {
   const changeOrder = async (event) => {
     setLoading(true);
     setIsFirstRender(false);
-    const data = await fetchNeas(`https://vast-castle-72865.herokuapp.com/api/astronomy/neas/1?field=${event.target.id}&order=${order}`);
+    const data = await fetchNeas(`${process.env.REACT_APP_SITE_URL}/api/astronomy/neas/1?field=${event.target.id}&order=${order}`);
     if (data.response) {
       setNumberOfPages(Math.floor(data.count / 10));
       setNumberOfDocs(data.count);

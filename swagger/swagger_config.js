@@ -10,7 +10,7 @@ const options = {
         },
         servers: [
             {
-                url: "https://vast-castle-72865.herokuapp.com/api/astronomy"
+                url: `${process.env.REACT_APP_SITE_URL}/api/astronomy`
             }
         ]
     },

@@ -17,7 +17,7 @@ function Map() {
     useEffect(() => {
         const fetchLandings = async () => {
             try {
-                const response = await fetch(`${process.env.REACT_APP_SITE_URL}/api/astronomy/landings/minMass/0`, {
+                const response = await fetch(`${process.env.REACT_APP_SITE_URL}/api/astronomy/landings`, {
                     headers: {
                         'Content-Type': 'application/x-www-form-urlencoded'
                     },
@@ -28,6 +28,7 @@ function Map() {
                   }
                 const data = await response.json();
                 if (data.response) {
+                    console.log(data)
                     setLandings(data.landings);
                 }
             }

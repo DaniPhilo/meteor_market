@@ -51,7 +51,7 @@ function LandingsList() {
     event.preventDefault();
 
     setLoading(true);
-    const data = await fetchLandings(`https://vast-castle-72865.herokuapp.com/api/astronomy/landings/name/${event.target.name.value}`, {
+    const data = await fetchLandings(`${process.env.REACT_APP_SITE_URL}/api/astronomy/landings/name/${event.target.name.value}`, {
       headers: {
         'Content-Type': 'application/x-www-form-urlencoded'
       },
@@ -68,7 +68,7 @@ function LandingsList() {
   const changeOrder = async (event) => {
     setLoading(true);
     setIsFirstRender(false);
-    const data = await fetchLandings(`https://vast-castle-72865.herokuapp.com/api/astronomy/landings/1?field=${event.target.id}&order=${order}`, {
+    const data = await fetchLandings(`${process.env.REACT_APP_SITE_URL}/api/astronomy/landings/1?field=${event.target.id}&order=${order}`, {
       headers: {
         'Content-Type': 'application/x-www-form-urlencoded'
       },

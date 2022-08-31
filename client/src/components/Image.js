@@ -27,8 +27,8 @@ function Image() {
                 :
                 <>
                     <div className="welcome">
-                        <h2>Welcome to Meteor Market!</h2>
-                        <h3>Your meteorites and asteroids shop</h3>
+                        <h2>Welcome to <span>Meteor Market</span>!</h2>
+                        <h3>Your <span>meteorites</span> and <span>asteroids</span> shop</h3>
                         <div className="welcome-info">
                             <p>Here you will find:</p>
                             <ul>
