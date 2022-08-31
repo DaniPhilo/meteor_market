@@ -58,9 +58,12 @@
   }
   
   .signing-container > p {
-    margin: 1rem auto;;
+    margin: 1rem auto;
+    width: fit-content;
     text-align: center;
     color: $accent-color;
     cursor: pointer;
   }
-  
+  .signing-container > p:hover {
+    color: $alt-accent-color;
+  }

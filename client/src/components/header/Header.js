@@ -36,7 +36,7 @@ function Header() {
           <IconNav currentPage={currentPage} setCurrentPage={setCurrentPage} windowWidth={windowWidth} />
           <Nav currentPage={currentPage} setCurrentPage={setCurrentPage} isVisible={isVisible} setIsVisible={setIsVisible} />
         </>}
-      <h1>NASA<span>.api</span></h1>
+      <h1>METEOR<span>_market</span></h1>
 
 
     </header>

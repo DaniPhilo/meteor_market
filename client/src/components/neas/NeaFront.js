@@ -47,21 +47,18 @@ function NeaFront({ nea, setNeas, setIsEdit, setIsAuthenticated}) {
             </div>
             <div className="card-content">
                 <div className="card-info">
-                    <p>Date: {discovery_date.slice(0, 10)}</p>
-                    <p>H_Mag: {h_mag}</p>
-                    <p>Moid_au: {moid_au}</p>
-                    <p>Q_au_1: {q_au_1}</p>
-                    <p>Q_au_2: {q_au_2}</p>
-                    <p>Period_yr: {period_yr}</p>
-                    <p>I_deg: {i_deg}</p>
-                    <p>Pha: {pha}</p>
-                    <p>Class: {orbit_class}</p>
+                    <p><b>Date</b>: {discovery_date.slice(0, 10)}</p>
+                    <p><b>Magnitude</b>: {h_mag}</p>
+                    <p><b>Perih / Aph.</b>.: {q_au_1} / {q_au_2}</p>
+                    <p><b>Orbit (years)</b>: {period_yr}</p>
+                    <p><b>Potentially Hazardous (Y/N)</b>: {pha}</p>
+                    <p><b>Class</b>: {orbit_class}</p>
                 </div>
                 <div className="card-buttons">
                     <button type='button' onClick={() => setIsEdit(prevState => !prevState)}><i className="fa-solid fa-pen-to-square"></i></button>
                     <button type='button' onClick={handleDelete}><i className="fa-solid fa-trash-can"></i></button>
                     {isInCart ?
-                        <button type='button' onClick={handleDeleteFromCart}><i className="fa-solid fa-cart-shopping"></i></button>
+                        <button type='button' onClick={handleDeleteFromCart}><i className="fa-solid fa-cart-shopping in-cart"></i></button>
                         :
                         <button type='button' onClick={handleToCart}><i className="fa-solid fa-cart-shopping"></i></button>
                     }

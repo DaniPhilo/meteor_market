@@ -71,7 +71,7 @@ function Map() {
     return (
         <section>
             <div className="map-title">
-                <h2>Check out meteorite landings on a map:</h2>
+                <h2>Check out meteorite landings on the map:</h2>
             </div>
             <div className="map-form-container">
                 <form action="" onSubmit={handleSubmitByWeight}>

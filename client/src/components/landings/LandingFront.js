@@ -47,17 +47,17 @@ function LandingFront({ landing, setLandings, setIsEdit, setIsAuthenticated }) {
             </div>
             <div className="card-content">
                 <div className="card-info">
-                    <p>Class: {recclass}</p>
-                    <p>Mass: {mass}</p>
-                    <p>Date: {year.slice(0, 10)}</p>
-                    <p>Lat: {reclat}</p>
-                    <p>Long: {reclong}</p>
+                    <p><b>Class</b>: {recclass}</p>
+                    <p><b>Mass</b>: {mass}</p>
+                    <p><b>Date</b>: {year.slice(0, 10)}</p>
+                    <p><b>Lat</b>: {reclat}</p>
+                    <p><b>Long</b>: {reclong}</p>
                 </div>
                 <div className="card-buttons">
                     <button type='button' onClick={() => setIsEdit(prevState => !prevState)}><i className="fa-solid fa-pen-to-square"></i></button>
                     <button type='button' onClick={handleDelete}><i className="fa-solid fa-trash-can"></i></button>
                     {isInCart ?
-                        <button type='button' onClick={handleDeleteFromCart}><i className="fa-solid fa-cart-shopping"></i></button>
+                        <button type='button' onClick={handleDeleteFromCart}><i className="fa-solid fa-cart-shopping in-cart"></i></button>
                         :
                         <button type='button' onClick={handleToCart}><i className="fa-solid fa-cart-shopping"></i></button>
                     }

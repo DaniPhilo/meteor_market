@@ -288,12 +288,6 @@
     margin-bottom: 1rem;
   }
   
-  .nea-card > .card-content > .card-info {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0.25rem;
-  }
-  
   .card-info > p {
     color: $text-color;
     font-size: 1rem;
@@ -320,6 +314,10 @@
   }
   .fa-cart-shopping {
     color: $buy-btn-color;
+  }
+
+  .in-cart {
+    color: $in-cart-btn-color;
   }
   
   .edit-form {
