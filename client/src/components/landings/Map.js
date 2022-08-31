@@ -25,7 +25,7 @@ function Map() {
                 });
                 if (response.status === 403) {
                     setIsAuthenticated(false);
-                  }
+                }
                 const data = await response.json();
                 if (data.response) {
                     console.log(data)
@@ -70,6 +70,9 @@ function Map() {
 
     return (
         <section>
+            <div className="map-title">
+                <h2>Check out meteorite landings on a map:</h2>
+            </div>
             <div className="map-form-container">
                 <form action="" onSubmit={handleSubmitByWeight}>
                     <label htmlFor="weight">Filter by weight: </label>
@@ -97,7 +100,14 @@ function Map() {
                     if (reclat && reclong) {
                         return (
                             <Marker key={_id} position={[reclat, reclong]}>
-                                <Popup>Name: {name}, Class: {recclass}, Mass: {mass}, Date: {year && year.slice(0, 10)}, Lat: {reclat}, Long: {reclong}</Popup>
+                                <Popup>
+                                    <ul className='map-popup-list'>
+                                        <li><b>Name</b>: {name}</li>
+                                        <li><b>Class</b>: {recclass}</li>
+                                        <li><b>Mass</b>: {mass}</li>
+                                        <li><b>Date</b>: {year && year.slice(0, 10)}</li>
+                                    </ul>
+                                </Popup>
                             </Marker>
                         )
                     }

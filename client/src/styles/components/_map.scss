@@ -1,3 +1,13 @@
+.map-title {
+    margin: 0 auto;
+}
+.map-title > h2 {
+    margin: 2rem 0;
+    text-align: center;
+    color: $text-color;
+    font-size: 2rem;
+}
+
 .map-form-container {
     display: flex;
     flex-direction: row;
@@ -46,6 +56,10 @@
     width: 100vw;
     height: 50vh;
     z-index: 5;
+}
+
+.map-popup-list {
+    list-style-type: none;
 }
 
 @media (min-width: 750px) {
