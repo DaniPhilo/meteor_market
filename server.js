@@ -18,7 +18,7 @@ const PORT = process.env.PORT || 3001;
 //     credentials: true
 // }));
 app.use(cors({
-    origin: 'http://localhost:3000',
+    origin: `${process.env.REACT_APP_SITE_URL}`,
     credentials: true
 }));
 app.use(express.json());
@@ -41,8 +41,8 @@ const neasRoutes = require('./routes/neas_routes');
 const { authenticateToken } = require('./middlewares/auth_middlewares');
 
 app.use('/api/auth', authRoutes);
-// app.use('/api/astronomy/landings', authenticateToken, landingRoutes);
-app.use('/api/astronomy/landings', landingRoutes);
+app.use('/api/astronomy/landings', authenticateToken, landingRoutes);
+// app.use('/api/astronomy/landings', landingRoutes);
 app.use('/api/astronomy/neas', authenticateToken, neasRoutes)
 // app.use('/api/astronomy/neas', neasRoutes);
 
