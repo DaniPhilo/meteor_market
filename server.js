@@ -18,12 +18,14 @@ const PORT = process.env.PORT || 3001;
 //     credentials: true
 // }));
 app.use(cors({
-    origin: `${process.env.REACT_APP_SITE_URL}`,
+    origin: `${process.env.REACT_DEPLOYMENT}`,
     credentials: true
 }));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
+
+console.log(process.env.REACT_DEPLOYMENT)
 
 // Docs route:
 const swaggerUI = require('swagger-ui-express');
