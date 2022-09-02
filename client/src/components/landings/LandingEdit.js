@@ -17,7 +17,7 @@ function LandingEdit({ landing, setIsEdit, setLandings, setIsAuthenticated }) {
             reclong: event.target.reclong.value || event.target.reclong.placeholder
         }
 
-        const response = await fetch(`${process.env.REACT_APP_BACKEND}/api/astronomy/landings/edit/${id}`, {
+        const response = await fetch(`https://pure-chamber-96021.herokuapp.com/api/astronomy/landings/edit/${id}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json'

@@ -25,8 +25,6 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 
-console.log(process.env.REACT_DEPLOYMENT)
-
 // Docs route:
 const swaggerUI = require('swagger-ui-express');
 const specs = require('./swagger/swagger_config');
@@ -73,6 +71,7 @@ app.use((error, req, res, next) => {
         return res.status(403).json({ response: false, authenticated: false, message: `Forbidden: ${error.message}`, full_error: error })
     }
     else if (error.type !== 'custom_error') {
+        console.log(error)
         return res.status(500).json({ response: false, error: error })
     }
     else {

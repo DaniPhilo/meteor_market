@@ -23,7 +23,7 @@ function CreateNea() {
             pha: event.target.pha.value,
             orbit_class: event.target.orbit_class.value
         }
-        const response = await fetch(`${process.env.REACT_APP_BACKEND}/api/astronomy/neas/create`, {
+        const response = await fetch(`https://pure-chamber-96021.herokuapp.com/api/astronomy/neas/create`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

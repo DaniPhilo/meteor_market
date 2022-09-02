@@ -14,7 +14,7 @@ function NeaFront({ nea, setNeas, setIsEdit, setIsAuthenticated}) {
     });
 
     const handleDelete = async () => {
-        const response = await fetch(`${process.env.REACT_APP_BACKEND}/api/astronomy/neas/delete/${designation}`, {
+        const response = await fetch(`https://pure-chamber-96021.herokuapp.com/api/astronomy/neas/delete/${designation}`, {
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/x-www-form-urlencoded'

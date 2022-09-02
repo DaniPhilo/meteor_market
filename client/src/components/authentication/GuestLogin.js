@@ -15,7 +15,7 @@ export default function GuestLogin() {
             password: 'Presidente73!'
         }
 
-        const request = await fetch(`${process.env.REACT_APP_BACKEND}/api/auth/signIn`, {
+        const request = await fetch('https://pure-chamber-96021.herokuapp.com/api/auth/signIn', {
             method: 'POST',
             headers: {
                 Accept: 'application/json',

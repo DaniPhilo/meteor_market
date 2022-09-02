@@ -7,20 +7,9 @@ import { UserContext } from '../../context/user_context';
 
 function Nea({ nea, setNeas }) {
 
-    
-
     const { setIsAuthenticated } = useContext(UserContext);
 
-    
-
     const [isEdit, setIsEdit] = useState(false);
-    
-
-    
-
-    
-
-    
 
     return (
         <div className='card-wrapper'>

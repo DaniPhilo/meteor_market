@@ -17,7 +17,7 @@ function Main() {
     const navigate = useNavigate();
 
     const checkSession = async () => {
-        const request = await fetch(`${process.env.REACT_APP_BACKEND}/api/auth/session`, {
+        const request = await fetch(`https://pure-chamber-96021.herokuapp.com/api/auth/session`, {
             headers: {
                 'Content-Type': 'application/x-www-form-urlencoded'
             },

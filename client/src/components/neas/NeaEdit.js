@@ -20,7 +20,7 @@ function NeaEdit({ nea, setIsEdit, setNeas, setIsAuthenticated }) {
             orbit_class: event.target.orbit_class.value || event.target.orbit_class.placeholder
         }
 
-        const response = await fetch(`${process.env.REACT_APP_BACKEND}/api/astronomy/neas/edit/${designation}`, {
+        const response = await fetch(`https://pure-chamber-96021.herokuapp.com/api/astronomy/neas/edit/${designation}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json'
