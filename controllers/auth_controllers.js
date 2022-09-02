@@ -38,11 +38,13 @@ const closeSignUp = (req, res, next) => {
 const initSignIn = async (req, res, next) => {
     try {
         const { email, password } = req.body;
+        console.log(email, password)
         const user = await findUserByField('email', email);
         if (!user) {
             const error = new AuthenticationError(401, 'No user with that email in DB');
             return next(error)
         }
+        console.log(user)
         const passwordCheck = await checkPassword(password, user.password);
         if (!passwordCheck) {
             const error = new AuthenticationError(401, 'Wrong password');
@@ -52,6 +54,7 @@ const initSignIn = async (req, res, next) => {
         return next()
     }
     catch (error) {
+        console.log(error)
         return next(error)
     }
 }
