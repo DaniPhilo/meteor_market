@@ -5,9 +5,18 @@
   
   .guest-container {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
+    gap: 2rem;
+  }
+  .guest-container > button {
+    padding: 0.25rem 1rem;
+    background-color: $card-color;
+    color: $text-color;
+    border: 1px solid $accent-color;
+    border-radius: 20px;
+    cursor: pointer;
   }
   
   .signing-container > h3,
@@ -42,8 +51,7 @@
     border-radius: 20px;
   }
   
-  .signing-container > form > button,
-  .guest-container > button {
+  .signing-container > form > button {
     padding: 0.5rem 1rem;
     background-color: $card-color;
     color: $text-color;
