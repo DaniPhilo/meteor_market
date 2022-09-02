@@ -17,7 +17,7 @@ function LandingEdit({ landing, setIsEdit, setLandings, setIsAuthenticated }) {
             reclong: event.target.reclong.value || event.target.reclong.placeholder
         }
 
-        const response = await fetch(`${process.env.REACT_APP_SITE_URL}/api/astronomy/landings/edit/${id}`, {
+        const response = await fetch(`${process.env.REACT_APP_BACKEND}/api/astronomy/landings/edit/${id}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json'

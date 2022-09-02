@@ -15,7 +15,7 @@ export default function GuestLogin() {
             password: 'Presidente73!'
         }
 
-        const request = await fetch(`${process.env.REACT_APP_SITE_URL}/api/auth/signIn`, {
+        const request = await fetch(`${process.env.REACT_APP_BACKEND}/api/auth/signIn`, {
             method: 'POST',
             headers: {
                 Accept: 'application/json',
@@ -34,6 +34,8 @@ export default function GuestLogin() {
         setIsAuthenticated(true);
         navigate('/home');
     }
+
+    
 
     return (
         <div className="guest-container">

@@ -19,7 +19,7 @@ function SignIn({ setShowSignUp }) {
             password: event.target.password.value
         }
 
-        const request = await fetch(`${process.env.REACT_APP_SITE_URL}/api/auth/signIn`, {
+        const request = await fetch(`${process.env.REACT_APP_BACKEND}/api/auth/signIn`, {
             method: 'POST',
             headers: {
                 Accept: 'application/json',
